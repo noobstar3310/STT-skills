@@ -2,6 +2,8 @@
 
 Picks are never bullets only — every suggested candidate gets a JD-fit table. Keep words simple; the reader decides in a minute.
 
+**Marks are binary: ✅ meets · ❌ does not meet.** No "partly" and no "unknown". Partly met → decide yes/no and say why in the proof column ("❌ 7 months, needs 2+ yrs"). Not shown → ❌ "not shown — ask". Put this legend line under every table: `✅ = meets · ❌ = does not meet (incl. not shown)`.
+
 ## Run file header
 ```
 # <Client>: <Role> — matchmaking (<YYYY-MM-DD>)
@@ -20,7 +22,7 @@ Ask <salary or "no real ask"> · Consent <✅/❌> · H ⭐<n> · Stage on this 
 
 | Requirement | Proof | |
 | --- | --- | --- |
-| <core skill> | <concrete evidence: employer, dates, repo/PR link> | ✅/🟡/❌/? |
+| <core skill> | <concrete evidence: employer, dates, repo/PR link> | ✅/❌ |
 | <each must-have> | … | |
 | <each nice-to-have> | … | |
 | <client rule: location/timezone> | … | |
@@ -30,14 +32,14 @@ Ask <salary or "no real ask"> · Consent <✅/❌> · H ⭐<n> · Stage on this 
 | Fraud risk | low/med/high + why | |
 | Consent | … | |
 
-**✅ a · 🟡 b · ❌ c · ? d.** Why: <one line>. Watch-out: <one line>.
+**✅ a / n.** Why: <one line>. Watch-out: <one line>.
 ```
 
 ## Side-by-side
 ```
 | Requirement | <A> | <B> | <C> |
 | --- | --- | --- | --- |
-| <core skill> | ✅ | 🟡 | ❌ |
+| <core skill> | ✅ | ❌ | ✅ |
 | … | | | |
 | **✅ count** | **n** | **n** | **n** |
 ```

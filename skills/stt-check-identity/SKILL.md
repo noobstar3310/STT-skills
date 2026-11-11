@@ -42,4 +42,4 @@ The agent can't open LinkedIn. Give the user a short list to check in their own 
 If the person has no LinkedIn, recommend a **video coffee chat with cameras on** before any intro.
 
 ## Output
-JD-fit rows: `| Fraud risk | low/med/high — tells: …; counter-evidence: … | ✅/🟡/❌ |`, `| No-poach / DO-NOT-PICK | … |`, plus the human checklist when risk ≥ medium or there is no LinkedIn. If risk is high, say "flag to the recruiting lead + Potential Fraud badge" — leave the final Fraud call to the lead.
+JD-fit rows: `| Fraud risk | low/med/high — tells: …; counter-evidence: … | ✅ low risk / ❌ medium or high |`, `| No-poach / DO-NOT-PICK | … |`, plus the human checklist when risk ≥ medium or there is no LinkedIn. If risk is high, say "flag to the recruiting lead + Potential Fraud badge" — leave the final Fraud call to the lead.

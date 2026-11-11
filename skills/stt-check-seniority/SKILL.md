@@ -24,8 +24,7 @@ Get the CV text (Work Experience field, or `../stt-match-job/scripts/fetch_cv.sh
 | | Means |
 | --- | --- |
 | ✅ | Did the core skill as their main job, for the required years, with outcomes (numbers, systems named) |
-| 🟡 | Did it partly, briefly, as a secondary skill, or on internal rather than production systems |
-| ❌ | Not shown |
+| ❌ | Did not — including partly, briefly, only as a secondary skill, or on internal rather than production systems. Write which one in the proof |
 
 A ❌ on the core skill removes the candidate, however many other boxes they tick — even when the user has relaxed the criteria. Relaxing "1–2 of 3 boxes" relaxes the boxes (years, brand, title), not the core skill. If no one passes, say so and suggest targeted sourcing rather than lowering the core.
 
@@ -36,4 +35,4 @@ A ❌ on the core skill removes the candidate, however many other boxes they tic
 - **H ⭐:** ~80% reliable. If your read disagrees by ≥2 stars, say why.
 
 ## Output
-JD-fit rows: core skill, years, level/leadership, each must-have, stability — each with concrete proof (employer, dates, what they owned) and ✅/🟡/❌/?.
+JD-fit rows: core skill, years, level/leadership, each must-have, stability — each with concrete proof (employer, dates, what they owned) and ✅/❌.

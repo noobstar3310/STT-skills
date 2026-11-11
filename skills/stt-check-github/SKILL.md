@@ -17,7 +17,7 @@ It needs the `gh` CLI (logged in) and prints: account age and followers; own vs 
 | Flag | What it usually means | Do |
 | --- | --- | --- |
 | `ONE-DAY REPO` (many commits, 1–2 days) | Take-home test, hackathon, or AI-generated dump | Open the file list: `Coding_Test*.pdf`, `Instructions.pdf`, `CLAUDE.md`/`agents.md` → coding test. Proves "can ship with AI", not depth |
-| `FORKS ONLY` | No own public code | Skill can't be verified → 🟡/? |
+| `FORKS ONLY` | No own public code | Skill can't be verified → ❌ "not provable on GitHub — ask for samples" |
 | `NEW ACCOUNT` (< 1 yr) | Normal for students; a red flag for "10-yr senior" | Pass to stt-check-identity |
 | `TINY PRS` (merged PRs mostly < 20 lines) | Docs, typo, dependency bumps | Don't call it deep contribution |
 | `NAME MISMATCH` (handle/name unrelated to the person) | Possible borrowed account | Pass to stt-check-identity |
@@ -27,12 +27,12 @@ Then open 1–3 of the most relevant items yourself (the biggest merged PR in th
 ## 3. Decide depth
 | Level | Evidence |
 | --- | --- |
-| **Proven deep** ✅ | Sustained work over months in the target language/stack: many merged PRs in real orgs (e.g. dozens merged in a core protocol repo), or an own project with commits over weeks and real users/stars |
-| **Proven used** 🟡 | Real but small: a few merged PRs, short projects, or work that matches the CV but is thin |
-| **Not provable** ? | Forks only, private work, no handle — say "private work, ask for samples" |
-| **Contradicts CV** ❌ | Account newer than claimed history, code in a different stack, someone else's code |
+| **Proven deep** → ✅ | Sustained work over months in the target language/stack: many merged PRs in real orgs (e.g. dozens merged in a core protocol repo), or an own project with commits over weeks and real users/stars |
+| **Proven used** → ✅ only if the JD asks "has used X"; ❌ if it asks for depth/strength | Real but small: a few merged PRs, short projects, or work that matches the CV but is thin |
+| **Not provable** → ❌ | Forks only, private work, no handle — say "private work, ask for samples" (not proof of fraud) |
+| **Contradicts CV** → ❌ | Account newer than claimed history, code in a different stack, someone else's code |
 
-Private employer code is normal for senior people — absence of public code is ? not ❌. A smart-contract role with no GitHub at all is too hard to verify → say so.
+Private employer code is normal for senior people — a ❌ here means "not proven yet", not "false"; say that in the proof. A smart-contract role with no GitHub at all is too hard to verify → say so.
 
 ## Output
-JD-fit row(s): `| <skill> on GitHub | <account since YYYY; N own repos; merged PRs: org/repo ×n (+lines); one-day/forks flags; links> | ✅/🟡/❌/? |` — always with links to the PRs or repos used as proof.
+JD-fit row(s): `| <skill> on GitHub | <account since YYYY; N own repos; merged PRs: org/repo ×n (+lines); one-day/forks flags; links> | ✅/❌ |` — always with links to the PRs or repos used as proof.

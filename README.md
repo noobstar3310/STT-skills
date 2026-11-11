@@ -31,6 +31,8 @@ JD + notes → core skill, must-haves, client rules
 - **Verify before presenting.** Spot-check one key claim per pick; agents overstate.
 - **Read-only by default.** No ATS writes without explicit human approval.
 - **Humans check LinkedIn.** Finalists only, in their own browser.
+- **Binary marks:** every JD row is ✅ meets or ❌ does not meet (not shown = ❌), with the proof next to it.
+- **Minimum years is a hard rule** (full-time only).
 - Quality scores ≈ 80% signal; salary range = self-assessment (use the lower bound); portal default ranges aren't asks.
 
 See [`lessons-from-runs.md`](skills/stt-match-job/references/lessons-from-runs.md) for the mistakes these rules come from.

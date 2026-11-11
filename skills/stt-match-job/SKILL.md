@@ -65,7 +65,7 @@ Rank by fit to the **core skill** first, then must-haves, then client rules, the
 
 ### 6. Write the output
 Use `references/output-templates.md` exactly:
-- Per pick: links, record ID, location, ask, consent, current stage, **JD-fit table** (every requirement + client rule, concrete proof, ✅/🟡/❌/?), one-line "why" and "watch-out".
+- Per pick: links, record ID, location, ask, consent, current stage, **JD-fit table** (every requirement + client rule, concrete proof, binary ✅ meets / ❌ does not meet), one-line "why" and "watch-out".
 - **Side-by-side table** with ✅ count.
 - Reject list, one line each with the reason.
 - Inflow runs: a **dates table** (profile created in MYT, applied-to job, funnel/scout).

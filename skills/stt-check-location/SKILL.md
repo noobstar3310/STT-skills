@@ -11,20 +11,20 @@ Location is the cheapest filter, so it runs first. But it is also where good peo
 From the ATS (Preferred Location, timezone field, Notes) and `../stt-match-job/references/client-rules.md`:
 - **Hard legal rule** (cannot hire): e.g. a government country list → nationality, not just city.
 - **Hard practical rule:** a stated timezone window (e.g. UTC+5 to +10), "US only", on-site city.
-- **Preference:** "Europe preferred", "SG/KL strongly preferred", "Asia". Fails here are 🟡, not ❌.
+- **Preference:** "Europe preferred", "SG/KL strongly preferred", "Asia". A miss here is ❌ for the preference row, but not a reject on its own — say so.
 
 ## 2. Find the candidate's real location
 Use all of: Airtable Location + Timezone, CV header (address, phone country code), current employer's office, school, languages.
-- If they disagree (CV says Lagos, platform says Abu Dhabi), mark **?** and say which sources disagree. It is also an identity signal — pass it to `stt-check-identity`.
-- Nationality for legal rules: phone code, school country, native language. If still unclear → **?** and "confirm passport".
+- If they disagree (CV says Lagos, platform says Abu Dhabi), mark ❌ "not confirmed" and say which sources disagree. It is also an identity signal — pass it to `stt-check-identity`.
+- Nationality for legal rules: phone code, school country, native language. If still unclear → ❌ "not confirmed — check passport".
 
 ## 3. Score
 | Result | When |
 | --- | --- |
-| ✅ | Inside the hard rule and the preference |
-| 🟡 | Inside hard rules, outside the preference; or within ~1 hour of a timezone window (say so — clients sometimes flex, e.g. a Singapore candidate interviewing for a UTC+5 limit) |
-| ❌ | Breaks a hard rule (banned nationality, outside a strict window by >1–2 h, not in a required country) |
-| ? | Location or nationality unknown or conflicting |
+| ✅ | Meets the rule (inside the window / allowed country). Within ~1 h of a soft timezone limit counts as ✅ only if the client has flexed before — say so |
+| ❌ | Does not meet it: outside the window, banned nationality, not in a required country, **or location/nationality unknown or conflicting** (write "not confirmed — ask") |
+
+Use separate rows for the hard rule and the preference, so a preference miss (❌) doesn't hide that the hard rule is met (✅).
 
 Relocation: count "open to relocate" only if the client allows relocation; note visa risk.
 
@@ -33,7 +33,7 @@ If no strong candidate passes in the preferred region, widen in rings and **say 
 - Example (Asia role): SG/KL → wider SEA → South Asia / East Asia inside UTC+5..+10 → (ask the user before going outside the window).
 - Example (US role): SF/NYC/Miami → rest of US → US-relocation candidates.
 - Example (Europe-preferred role): Europe → North America.
-Don't silently drop the rule: a pick from an outer ring is presented with that 🟡 and a one-line question for the client ("would they take UTC+1?").
+Don't silently drop the rule: a pick from an outer ring is presented with ❌ on the preference row and a one-line question for the client ("would they take UTC+1?").
 
 ## Output
-One row for the JD-fit table: `| Location / timezone (<rule>) | <city, country, UTC±x; sources> | ✅/🟡/❌/? |` plus, for legal rules, a nationality row.
+One row for the JD-fit table: `| Location / timezone (<rule>) | <city, country, UTC±x; sources> | ✅/❌ |` plus, for legal rules, a nationality row.
